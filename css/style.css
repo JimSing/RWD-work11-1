@@ -951,7 +951,7 @@ img {
 
 .order .order_content .order_content_information li .hotFood::before {
   position: absolute;
-  top: 24px;
+  top: 22px;
   right: -32px;
   content: "";
   display: block;
