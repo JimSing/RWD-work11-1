@@ -161,9 +161,103 @@ img {
   }
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 4% 21px 4%;
+}
+
+.footer .footer_totle {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .footer_totle h4 {
+  font-size: 24px;
+}
+
+.footer .footer_totle p {
+  line-height: 1.3;
+}
+
+.footer .footer_totle .footer_totle_about p {
+  padding-right: 4%;
+}
+
+.footer .footer_totle .footer_totle_contact ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.footer .footer_community {
+  width: 45%;
+  text-align: end;
+}
+
+.footer .footer_community h2 {
+  font-size: 49px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.footer .footer_community ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.footer .footer_community ul li {
+  margin-left: 10px;
+}
+
+.footer .footer_community ul li a {
+  text-decoration: none;
+}
+
+.footer .footer_community ul li a.orange {
+  color: #DB4437;
+}
+
+.footer .footer_community ul li a.lightBlue {
+  color: #41ABE1;
+}
+
+.footer .footer_community ul li a.blue {
+  color: #3A5795;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer_totle {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer_totle .footer_totle_contact {
+    margin-top: 20px;
+  }
+  .footer .footer_community {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
 .content_secrets {
   text-align: center;
-  padding: 50px 0;
+  margin: 50px auto;
 }
 
 .content_secrets h4 {
@@ -276,7 +370,8 @@ img {
 }
 
 .content_thoughts {
-  padding: 50px 4%;
+  padding: 0 4%;
+  margin: 50px auto;
 }
 
 .content_thoughts h3 {
@@ -441,102 +536,8 @@ img {
   }
 }
 
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 50px 4% 21px 4%;
-}
-
-.footer .footer_totle {
-  width: 55%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footer .footer_totle h4 {
-  font-size: 24px;
-}
-
-.footer .footer_totle p {
-  line-height: 1.3;
-}
-
-.footer .footer_totle .footer_totle_about p {
-  padding-right: 4%;
-}
-
-.footer .footer_totle .footer_totle_contact ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-.footer .footer_community {
-  width: 45%;
-  text-align: end;
-}
-
-.footer .footer_community h2 {
-  font-size: 49px;
-  font-weight: 800;
-  margin-bottom: 16px;
-}
-
-.footer .footer_community ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-
-.footer .footer_community ul li {
-  margin-left: 10px;
-}
-
-.footer .footer_community ul li a {
-  text-decoration: none;
-}
-
-.footer .footer_community ul li a.orange {
-  color: #DB4437;
-}
-
-.footer .footer_community ul li a.lightBlue {
-  color: #41ABE1;
-}
-
-.footer .footer_community ul li a.blue {
-  color: #3A5795;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .footer .footer_totle {
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .footer .footer_totle .footer_totle_contact {
-    margin-top: 20px;
-  }
-  .footer .footer_community {
-    margin-top: 20px;
-    width: 100%;
-  }
-}
-
 .login {
-  padding: 50px 0;
+  margin: 50px auto;
 }
 
 .login h3, .login p {
@@ -613,7 +614,7 @@ img {
 }
 
 .register {
-  margin-top: 50px;
+  margin: 50px auto;
 }
 
 .register .register_logo, .register .register_title {
@@ -712,7 +713,7 @@ img {
 }
 
 .order {
-  margin: 50px 0;
+  margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,0 +1,220 @@
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #EFE9E7;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: $brown;
+}
+
+// header
+.header{
+    height: 420px;
+    background: url(https://upload.cc/i1/2021/12/31/AXDer7.png) center no-repeat;
+    position: relative;
+    color: $white;
+
+    .header_menu{
+        padding: 0px 0 0 2.5%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.75);
+
+        .header_menu_logo{
+            font-size: 24px;
+
+            a{
+                color: $white;
+                font-weight: bolder;
+                text-decoration: none;
+                transition: all .3s;
+            }
+            a:hover{
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .header_menu_minlist{
+            display: none;
+        }
+
+        .header_menu_list{
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: flex-end;
+            transition: all .5s;
+            li{
+                margin:0 3%;
+
+                a{
+                    color: $white;
+                    text-decoration: none;
+                    transition:  all .3s;
+                }
+                a:hover{
+                    color: rgba(255, 255, 255, 0.4);
+
+                }
+            }
+        }
+
+    }
+    .header_title{
+        background-color: rgba(0,0,0,0.35);
+        @include positionCenter;
+        text-align: center;
+        padding: 20px 22px;
+        line-height: 1.5;
+
+        h2{
+            font-size: 32px;
+            white-space: nowrap;
+            margin-bottom: 10px;
+        }
+    }
+}
+@media(max-width:768px){
+    .header{
+        .header_title{
+            h2{
+                i{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media(max-width:375px){
+    .header{
+        .header_menu{
+            position: fixed;
+            z-index: 2;
+
+            .header_menu_minlist{
+                display: block;
+                align-self: center;
+                a{
+                    text-decoration: none;
+                    color: $white;
+                    margin-right: 20px;
+                    font-size: 24px;
+                }
+            }
+            .header_menu_list{
+                background-color: rgba(0,0,0,0.98);
+                position: absolute;
+                top: 56px;
+                left: 0;
+                right: 0;
+                overflow: hidden;
+                max-height: 0;
+                flex-direction: column;
+                
+    
+                li{
+                    width: 100%;
+                    text-align: center;
+                    a{
+                        display: block;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+        
+    }
+    .open{
+        .header_menu{
+            .header_menu_list{
+                max-height: 300px;
+            }
+        }
+        
+    }
+}
+
+
+// footer
+.footer{
+    display: flex;
+    padding: 50px 4% 21px 4%;
+    
+    .footer_totle{
+        width: 55%;
+        display: flex;
+        
+        h4{
+            font-size: 24px
+        }
+        p{
+            line-height: 1.3;
+        }
+        .footer_totle_about{
+            p{
+                padding-right: 4%;
+            }
+        }
+        .footer_totle_contact{
+            
+            ul{
+                padding-left: 20px;
+                list-style:disc;
+            }
+        }
+    }
+    
+    .footer_community{
+        width: 45%;
+        text-align: end;
+
+        h2{
+            font-size: 49px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        ul{
+            display: flex;
+            justify-content: end;
+            
+            li{
+                margin-left: 10px;
+                a{
+                    text-decoration: none;
+                }
+                a.orange{
+                    color: #DB4437;
+                }
+                a.lightBlue{
+                    color: #41ABE1;
+                }
+                a.blue{
+                    color: #3A5795;
+                }
+            }
+        }
+            
+    }
+}
+@media(max-width:768px){
+    .footer{
+        flex-direction: column;
+        
+        .footer_totle{
+            width: 100%;
+            flex-direction: column;
+
+            .footer_totle_contact{
+                margin-top: 20px;
+            }
+        }
+        .footer_community{
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+}

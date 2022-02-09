@@ -1,6 +1,6 @@
 // order
 .order{
-    margin: 50px 0;
+    @include marginTopBottom;
     display: flex;
     padding: 0 4%;
     .order_siderbar{
@@ -15,7 +15,7 @@
         ul{
             li{
                 a{
-                    display: block;
+                     display: block;
                     text-decoration: none;
                     padding: 10px 0 10px 5px;
                     border-radius: 3px;

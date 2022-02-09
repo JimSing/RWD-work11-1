@@ -1,0 +1,9 @@
+@mixin positionCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin marginTopBottom {
+    margin: 50px auto;
+}

@@ -1,6 +1,6 @@
 // login
 .login{
-    padding: 50px 0;
+    @include marginTopBottom;
     h3,p{
         text-align: center;
         font-size: $font-xl;

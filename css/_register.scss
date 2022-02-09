@@ -1,6 +1,6 @@
 // register
 .register{
-    margin-top: 50px;
+    @include marginTopBottom;
     .register_logo,.register_title{
         text-align: center;
         font-size: 20px
