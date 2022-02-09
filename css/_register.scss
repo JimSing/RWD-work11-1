@@ -1,0 +1,78 @@
+// register
+.register{
+    margin-top: 50px;
+    .register_logo,.register_title{
+        text-align: center;
+        font-size: 20px
+    }
+    .register_logo{
+        font-weight: 800;
+        font-size: 48px;
+        margin-bottom: 8px;
+    }
+    .register_newcode{
+        width: 620px;
+        margin: 35px auto;
+        padding: 15px;
+        border-top: 4px solid $orange;
+        box-shadow: $card-shadow;
+        h4{
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+        .register_newcode_content{
+            display: flex;
+            .register_newcode_content_contract{
+                width: 50%;
+                line-height: 1.5;
+                padding-right: 1%;
+            }
+            form{
+                width: 50%;
+                padding-left: 1%;
+                input{
+                    width: 100%;
+                }
+                input[type="email"]{
+                    margin-bottom: 16px;
+                }
+                > a{
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $orange;
+                    text-decoration: none;
+                    transition: all .5s;
+                    margin-bottom: 36px;
+                }
+                .register_newcode_content_btn{
+                    display: flex;
+                    justify-content: flex-end;
+                    .btnorange{
+                        width: 50%;
+                        border-radius: 3px;
+                        background-color: $bright-orange;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .register{
+        .register_newcode{
+            width: 90%;
+            .register_newcode_content{
+                flex-direction: column;
+                .register_newcode_content_contract{
+                    width: 100%;
+                }
+                form{
+                    margin-top: 30px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

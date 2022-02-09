@@ -1,0 +1,260 @@
+// order
+.order{
+    margin: 50px 0;
+    display: flex;
+    padding: 0 4%;
+    .order_siderbar{
+        width: 25%;
+        padding-right: 20px;
+        h2{
+            margin-bottom: 16px;
+            i{
+                font-size: 30px;
+            }
+        }
+        ul{
+            li{
+                a{
+                    display: block;
+                    text-decoration: none;
+                    padding: 10px 0 10px 5px;
+                    border-radius: 3px;
+                    color: $brown;
+                    border-bottom:1px solid $brown;
+                    transition: all .5s;
+                    &:hover{
+                        background-color: $brown;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .order_content{
+        width: 75%;
+        
+        .order_content_topbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .order_content_topbar_search{
+                width: 60%;
+                
+                form{
+                    display: flex;
+                    input{
+                        width: 100%;
+                        border-radius: 3px;
+                        border: 2px solid $brown;
+                    }                    
+                    a{
+                        display: block;
+                        margin-left: -4px;
+                        padding: 7px;
+                        color: $white;
+                        background-color: $brown;
+                        border-radius: 3px;
+                    }
+                }
+            }
+
+            .order_content_topbar_shopping{
+                display: flex;
+                a{
+                    text-decoration: none;
+                    color: $brown;
+                }
+                .checkout{
+                    display: block;
+                    line-height: 1.5;
+                    margin-right: 25px;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        top:5px;
+                        right: -15px;
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 15px;
+                        background-color: $brown;
+                    }
+                    
+                }
+                .shop{
+                    font-size: 24px;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        top: -7px;
+                        right: -5px;
+                        border-radius: 50%;
+                        width: 17px;
+                        height: 17px;
+                        background-color: $orange;
+                        color: $white;
+                        font-size: $font-s;
+                        text-align: center;
+                        line-height: 1.3;
+                    }
+                }
+            }
+        }
+        .order_content_information{
+            margin-top: 26px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li{
+                width: 31.3%;
+                text-align: center;
+                position: relative;
+                box-shadow: $card-shadow;
+                margin-bottom: 20px;
+                div{
+                    padding: 10px;
+                    line-height: 1.5;
+                    h4{
+                        font-size: $font-xl;
+                    }
+                    p{
+                        font-size: $font-s;
+                        white-space: nowrap;
+                        position: relative;
+                        &::before{
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            bottom: -15px;
+                            right: 50%;
+                            width: 20%;
+                            height: 1px;
+                            background-color: $brown;
+                        }
+                        &::after{
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            bottom: -15px;
+                            left: 50%;
+                            width: 20%;
+                            height: 1px;
+                            background-color: $brown;
+                        }
+                    }
+                    .dollar{
+                        display: block;
+                        font-size: $font-xl;
+                        margin-bottom: 15px;
+                        i{
+                            font-style: italic;
+                            font-weight: bold;
+                        }
+                    }
+                    .addshop{
+                        display: block;
+                        text-decoration: none;
+                        border: 2px solid $orange;
+                        border-radius: 3px;
+                        color: $orange;
+                        transition: all .5s;
+                        &:hover{
+                            color: $white;
+                            background-color: $orange;
+                        }
+                    }
+                    .love{
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        text-decoration: none;
+                        color: $white;
+                        font-size: $font-xl;
+                        &:hover{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .hotFood{
+                    font-size: 16px;
+                    color: $white;
+                    height: 30px;
+                    line-height: 1.7;
+                    position: absolute;
+                    top: -15px;
+                    right: -48px;
+                    border-width: 30px;
+                    border-style: solid;
+                    border-color: transparent transparent #00CC99 transparent;
+                    transform: rotate(45deg);
+                    &::before{
+                        position: absolute;
+                        top: 24px;
+                        right: -32px;
+                        content: "";
+                        display: block;
+                        border-top:10px solid transparent ;
+                        border-bottom: 10px solid transparent;
+                        border-right:10px solid #078F6D;
+                        transform: rotate(135deg);
+                    }
+                    &::after{
+                        position: absolute;
+                        top: 23px;
+                        right: 86px;
+                        content: "";
+                        display: block;
+                        border-top:10px solid transparent ;
+                        border-bottom: 10px solid transparent;
+                        border-right:10px solid #078F6D;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .order{
+        .order_content{
+            .order_content_information{
+                li{
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+@media(max-width:767px){
+    .order{
+        flex-direction: column;
+        .order_siderbar{
+            width: 100%;
+            padding: 0;
+        }
+        .order_content{
+            margin-top: 40px;
+            width: 100%;
+            .order_content_topbar{
+                flex-direction: column;
+                align-items: flex-end;
+                .order_content_topbar_search{
+                    width: 100%;
+                }
+                .order_content_topbar_shopping{
+                    margin-top: 20px;
+                    
+                }
+            }
+            .order_content_information{
+                li{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
