@@ -3,9 +3,18 @@
     @include marginTopBottom;
     display: flex;
     padding: 0 4%;
+
+    @include phone(){
+        flex-direction: column;
+    }
     .order_siderbar{
         width: 25%;
         padding-right: 20px;
+
+        @include phone(){
+            width: 100%;
+            padding: 0;
+        }
         h2{
             margin-bottom: 16px;
             i{
@@ -32,15 +41,26 @@
     }
     .order_content{
         width: 75%;
-        
+
+        @include phone(){
+            margin-top: 40px;
+            width: 100%;
+        }
         .order_content_topbar{
             display: flex;
             justify-content: space-between;
             align-items: center;
 
+            @include phone(){
+                flex-direction: column;
+                align-items: flex-end;
+            }
             .order_content_topbar_search{
                 width: 60%;
                 
+                @include phone(){
+                    width: 100%;
+                }
                 form{
                     display: flex;
                     input{
@@ -61,6 +81,10 @@
 
             .order_content_topbar_shopping{
                 display: flex;
+
+                @include phone(){
+                    margin-top: 20px;
+                }
                 a{
                     text-decoration: none;
                     color: $brown;
@@ -112,6 +136,20 @@
                 position: relative;
                 box-shadow: $card-shadow;
                 margin-bottom: 20px;
+
+                // grid.scss
+                @include pad(){
+                    width: 48%;
+                }
+                @include iphone6(){
+                    width: 100%;
+                }
+
+                img{
+                    @include pad(){
+                        width: 100%;
+                    }
+                }
                 div{
                     padding: 10px;
                     line-height: 1.5;
@@ -209,49 +247,6 @@
                         border-bottom: 10px solid transparent;
                         border-right:10px solid #078F6D;
                         transform: rotate(45deg);
-                    }
-                }
-            }
-        }
-    }
-}
-@media(max-width:768px){
-    .order{
-        .order_content{
-            .order_content_information{
-                li{
-                    width: 48%;
-                }
-            }
-        }
-    }
-}
-@media(max-width:767px){
-    .order{
-        flex-direction: column;
-        .order_siderbar{
-            width: 100%;
-            padding: 0;
-        }
-        .order_content{
-            margin-top: 40px;
-            width: 100%;
-            .order_content_topbar{
-                flex-direction: column;
-                align-items: flex-end;
-                .order_content_topbar_search{
-                    width: 100%;
-                }
-                .order_content_topbar_shopping{
-                    margin-top: 20px;
-                    
-                }
-            }
-            .order_content_information{
-                li{
-                    width: 100%;
-                    img{
-                        width: 100%;
                     }
                 }
             }

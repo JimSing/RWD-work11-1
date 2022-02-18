@@ -4,6 +4,7 @@
     background: #EFE9E7;
     font-family: 'Noto Sans TC', sans-serif;
     color: $brown;
+    overflow: hidden;
 }
 
 // header
@@ -23,6 +24,12 @@
         right: 0;
         background-color: rgba(0,0,0,0.75);
 
+        // grid.scss
+        @include iphone6(){
+            position:fixed;
+            z-index: 2;
+            
+        }
         .header_menu_logo{
             font-size: 24px;
 
@@ -39,6 +46,21 @@
 
         .header_menu_minlist{
             display: none;
+
+            // grid.scss
+            @include iphone6(){
+                display: block;
+                align-self: center;
+            }
+            a{
+                // grid.scss
+                @include iphone6(){
+                    text-decoration: none;
+                    color: $white;
+                    margin-right: 20px;
+                    font-size: 24px;
+                }
+            }
         }
 
         .header_menu_list{
@@ -47,13 +69,36 @@
             flex-grow: 1;
             justify-content: flex-end;
             transition: all .5s;
+
+            // grid.scss
+            @include iphone6(){
+                background-color: rgba(0,0,0,0.98);
+                position: absolute;
+                top: 56px;
+                left: 0;
+                right: 0;
+                overflow: hidden;
+                max-height: 0;
+                flex-direction: column;
+            }
             li{
                 margin:0 3%;
 
+                // grid.scss
+                @include iphone6(){
+                    width: 100%;
+                    text-align: center;
+                }
                 a{
                     color: $white;
                     text-decoration: none;
                     transition:  all .3s;
+
+                    // grid.scss
+                    @include iphone6(){
+                        display: block;
+                        padding: 10px 0;
+                    }
                 }
                 a:hover{
                     color: rgba(255, 255, 255, 0.4);
@@ -74,66 +119,23 @@
             font-size: 32px;
             white-space: nowrap;
             margin-bottom: 10px;
-        }
-    }
-}
-@media(max-width:768px){
-    .header{
-        .header_title{
-            h2{
-                i{
+            i{
+                // grid.scss
+                @include pad(){
                     display: block;
                 }
             }
         }
     }
 }
-@media(max-width:375px){
-    .header{
-        .header_menu{
-            position: fixed;
-            z-index: 2;
-
-            .header_menu_minlist{
-                display: block;
-                align-self: center;
-                a{
-                    text-decoration: none;
-                    color: $white;
-                    margin-right: 20px;
-                    font-size: 24px;
-                }
-            }
-            .header_menu_list{
-                background-color: rgba(0,0,0,0.98);
-                position: absolute;
-                top: 56px;
-                left: 0;
-                right: 0;
-                overflow: hidden;
-                max-height: 0;
-                flex-direction: column;
-                
-    
-                li{
-                    width: 100%;
-                    text-align: center;
-                    a{
-                        display: block;
-                        padding: 10px 0;
-                    }
-                }
-            }
-        }
-        
-    }
-    .open{
-        .header_menu{
-            .header_menu_list{
+.open{
+    .header_menu{
+        .header_menu_list{
+            // grid.scss
+            @include iphone6(){
                 max-height: 300px;
             }
         }
-        
     }
 }
 
@@ -143,10 +145,19 @@
     display: flex;
     padding: 50px 4% 21px 4%;
     
+    // grid.scss
+    @include pad(){
+        flex-direction: column;
+    }
     .footer_totle{
         width: 55%;
         display: flex;
         
+        // grid.scss
+        @include pad(){
+            width: 100%;
+            flex-direction: column;
+        }
         h4{
             font-size: 24px
         }
@@ -154,12 +165,21 @@
             line-height: 1.3;
         }
         .footer_totle_about{
+            h4:first-child{
+                margin-bottom: 10px;
+            }
             p{
                 padding-right: 4%;
             }
         }
         .footer_totle_contact{
-            
+            h4:first-child{
+                margin-bottom: 20px;
+            }
+            // grid.scss
+            @include pad(){
+                margin-top: 20px;
+            }
             ul{
                 padding-left: 20px;
                 list-style:disc;
@@ -171,6 +191,11 @@
         width: 45%;
         text-align: end;
 
+        // grid.scss
+        @include pad(){
+            margin-top: 20px;
+            width: 100%;
+        }
         h2{
             font-size: 49px;
             font-weight: 800;
@@ -198,23 +223,5 @@
             }
         }
             
-    }
-}
-@media(max-width:768px){
-    .footer{
-        flex-direction: column;
-        
-        .footer_totle{
-            width: 100%;
-            flex-direction: column;
-
-            .footer_totle_contact{
-                margin-top: 20px;
-            }
-        }
-        .footer_community{
-            margin-top: 20px;
-            width: 100%;
-        }
     }
 }

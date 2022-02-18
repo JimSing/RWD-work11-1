@@ -1,5 +1,7 @@
 // register
 .register{
+
+    // mixin.scss
     @include marginTopBottom;
     .register_logo,.register_title{
         text-align: center;
@@ -16,6 +18,10 @@
         padding: 15px;
         border-top: 4px solid $orange;
         box-shadow: $card-shadow;
+
+        @include pad(){
+            width: 90%;
+        }
         h4{
             text-align: center;
             margin-bottom: 16px;
@@ -23,14 +29,27 @@
         }
         .register_newcode_content{
             display: flex;
+            
+            @include pad(){
+                flex-direction: column;
+            }
             .register_newcode_content_contract{
                 width: 50%;
                 line-height: 1.5;
                 padding-right: 1%;
+
+                @include pad(){
+                    width: 100%;
+                }
             }
             form{
                 width: 50%;
                 padding-left: 1%;
+
+                @include pad(){
+                    margin-top: 30px;
+                    width: 100%;
+                }
                 input{
                     width: 100%;
                 }
@@ -55,23 +74,6 @@
                     }
                 }
                 
-            }
-        }
-    }
-}
-@media(max-width:768px){
-    .register{
-        .register_newcode{
-            width: 90%;
-            .register_newcode_content{
-                flex-direction: column;
-                .register_newcode_content_contract{
-                    width: 100%;
-                }
-                form{
-                    margin-top: 30px;
-                    width: 100%;
-                }
             }
         }
     }
